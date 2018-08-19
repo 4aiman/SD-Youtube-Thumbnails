@@ -1,1 +1,0 @@
-# SDYoutubeThumbnails.js
