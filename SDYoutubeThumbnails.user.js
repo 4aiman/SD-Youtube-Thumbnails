@@ -2,8 +2,8 @@
 // @name         SD YouTube Thumbnails
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Swaps thumbnails in edit mode for their SD counterparts
-// @author       4aiman
+// @description  try to take over the world!
+// @author       You
 // @match        https://www.youtube.com/edit*
 // @grant        none
 // ==/UserScript==
@@ -12,10 +12,18 @@
     'use strict';
 
     // Your code here...
-    document.querySelector(".metadata-thumbnail-chooser.vertical-thumbnail-chooser").style.width = "420px";
-    document.querySelector(".selectable-thumb.standard-thumb.thumb_dimensions.selectable-thumb-selected").style.width = "420px";
-    var wraps = document.getElementsByClassName("yt-thumb-120");
+    var wraps = document.getElementsByClassName(".metadata-thumbnail-chooser.vertical-thumbnail-chooser");
     var j;
+    for (j = 0; j < wraps.length; j++) {
+         wraps[j].style.width = "420px";
+    }
+
+    wraps = document.getElementsByClassName(".selectable-thumb.standard-thumb.thumb_dimensions.selectable-thumb-selected");
+    for (j = 0; j < wraps.length; j++) {
+         wraps[j].style.width = "420px";
+    }
+
+    wraps = document.getElementsByClassName("yt-thumb-120");
     for (j = 0; j < wraps.length; j++) {
          wraps[j].style.width = "420px";
     }
