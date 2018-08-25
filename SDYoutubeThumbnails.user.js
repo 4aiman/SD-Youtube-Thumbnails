@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         SD YouTube Thumbnails
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.youtube.com/edit*
-// @grant        none
+// @grant GM_addStyle
 // ==/UserScript==
 function IsImageOk(img) {
     // During the onload event, IE correctly identifies any images that
@@ -85,6 +85,13 @@ function IsImageOk(img) {
 
         var info = document.getElementById('video-info')
         info.style = 'clear: left; margin-top: -350pt';
+        GM_addStyle('dt, dd { font-size: 12pt!important; width: 125pt!important;}');
+        GM_addStyle('dl {width: 450pt!important;}');
+        GM_addStyle('h2 {font-size: 14pt!important;}');
+        GM_addStyle('.vm-sprite.yt-sprite {float:none!important;}');
+        GM_addStyle('.yt-uix-button.yt-uix-button-size-default.yt-uix-button-default.custom-thumb-button {width:420px!important; height:40pt!important; font-size:14pt!important;}');
+        GM_addStyle('.yt-uix-hovercard-target.custom-thumb-text { font-size:14pt!important;}');
+
     }
 })();
 
