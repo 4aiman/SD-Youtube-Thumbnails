@@ -2,7 +2,7 @@
 // @name         SD YouTube Thumbnails
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  Replaces YouTube thumbnails with an SD ones!
 // @author       4aiman
 // @match        https://www.youtube.com/edit*
 // @match        https://i.ytimg.com/*
