@@ -24,7 +24,7 @@ function imageExists(image_url){
 }
 
 function IsImageOk(img) {
-    if (!imageExists(img.src)) { return false; }
+    //if (!imageExists(img.src)) { return false; } --somehow this *silently* fails everytime
     if (!img.complete) { return false; }
     if (img.naturalWidth === 0) { return false; }
 
